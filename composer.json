@@ -1,0 +1,31 @@
+{
+    "name": "bworksio/nova-questionable",
+    "description": "A Laravel Nova tool for creating Questionaires",
+    "keywords": [
+        "laravel",
+        "question",
+        "feedback",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bworksio\\NovaQuestionable\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bworksio\\NovaQuestionable\\ToolServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
