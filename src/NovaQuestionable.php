@@ -15,8 +15,6 @@ class NovaQuestionable extends Tool
     public function boot()
     {
 
-        $this->loadMigrationsFrom(__DIR__.'/migrations');
-        
         Nova::script('nova-questionable', __DIR__.'/../dist/js/tool.js');
         Nova::style('nova-questionable', __DIR__.'/../dist/css/tool.css');
     }
@@ -31,3 +29,4 @@ class NovaQuestionable extends Tool
         return view('nova-questionable::navigation');
     }
 }
+ 
