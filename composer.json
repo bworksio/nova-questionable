@@ -11,9 +11,18 @@
     "require": {
         "php": ">=7.1.0"
     },
+    "require-dev": {
+        "orchestra/testbench": "~3.0",
+        "phpunit/phpunit": "7.1"
+    },
     "autoload": {
         "psr-4": {
             "Bworksio\\NovaQuestionable\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bworkios\\NovaQuestionable\\Tests\\": "tests/"
         }
     },
     "extra": {
@@ -25,6 +34,11 @@
     },
     "config": {
         "sort-packages": true
+    },
+    "scripts": {
+        "test": [
+            "phpunit"
+        ]
     },
     "minimum-stability": "dev",
     "prefer-stable": true
