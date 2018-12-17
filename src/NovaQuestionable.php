@@ -19,6 +19,18 @@ class NovaQuestionable extends Tool
     }
 
     /**
+     * Register the tool's routes.
+     *
+     * @return void
+     */
+    static public function sayHi()
+    {
+        return response()->json([
+            'hi' => true
+        ]);
+    }
+
+    /**
      * Build the view that renders the navigation links for the tool.
      *
      * @return \Illuminate\View\View
