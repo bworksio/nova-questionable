@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/api/hi', function (Request $request) {
-    return response()->json([
-        'hi from questionable routes' => true
-    ]);
-});
+Route::get('/api/hi', 'Bworksio\NovaQuestionable\Http\Controllers\BaseController@hello');
+
+Route::get('/api/questionnaires/index', 'Bworksio\NovaQuestionable\Http\Controllers\QuestionnaireController@index');
+Route::post('/api/questionnaires/create', 'Bworksio\NovaQuestionable\Http\Controllers\QuestionnaireController@create');
+Route::post('/api/questionnaires/update', 'Bworksio\NovaQuestionable\Http\Controllers\QuestionnaireController@update');
+Route::post('/api/questionnaires/delete', 'Bworksio\NovaQuestionable\Http\Controllers\QuestionnaireController@delete');
