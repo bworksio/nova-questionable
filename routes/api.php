@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/endpoint', function (Request $request) {
-//     //
-// });
+Route::get('/api/hi', function (Request $request) {
+    return response()->json([
+        'hi from questionable routes' => true
+    ]);
+});
