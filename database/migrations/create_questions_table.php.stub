@@ -19,7 +19,7 @@ class CreateQuestionsTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('questionable_tags', function (Blueprint $table) {
+        Schema::create('tags', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->timestamps();
@@ -27,19 +27,20 @@ class CreateQuestionsTable extends Migration
 
         Schema::create('questions', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
             $table->timestamps();
         });
 
-        Schema::create('questions_tags', function (Blueprint $table) {
+        Schema::create('question_tag', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('question_id');
             $table->unsignedInteger('tag_id');
             $table->foreign('question_id')->references('id')->on('questions');
-            $table->foreign('tag_id')->references('id')->on('questionable_tags');
+            $table->foreign('tag_id')->references('id')->on('tags');
             $table->timestamps();
         });
 
-        Schema::create('questionnaires_questions', function (Blueprint $table) {
+        Schema::create('questionnaire_question', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('questionnaire_id');
             $table->unsignedInteger('question_id');
@@ -56,9 +57,9 @@ class CreateQuestionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('questionnaires_questions');
-        Schema::dropIfExists('questions_tags');
-        Schema::dropIfExists('questionable_tags');
+        Schema::dropIfExists('questionnaire_question');
+        Schema::dropIfExists('question_tag');
+        Schema::dropIfExists('tags');
         Schema::dropIfExists('questions');
         Schema::dropIfExists('questionnaires');
     }
