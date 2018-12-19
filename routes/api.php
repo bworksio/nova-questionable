@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/api/hi', 'Bworksio\NovaQuestionable\Http\Controllers\BaseController@hello');
 
-Route::get('/api/questionnaires/index', 'Bworksio\NovaQuestionable\Http\Controllers\QuestionnaireController@index');
-Route::post('/api/questionnaires/create', 'Bworksio\NovaQuestionable\Http\Controllers\QuestionnaireController@create');
-Route::post('/api/questionnaires/update', 'Bworksio\NovaQuestionable\Http\Controllers\QuestionnaireController@update');
-Route::post('/api/questionnaires/delete', 'Bworksio\NovaQuestionable\Http\Controllers\QuestionnaireController@delete');
+Route::get('/api/questionnaire/list', 'Bworksio\NovaQuestionable\Http\Controllers\QuestionnaireController@list');
+Route::post('/api/questionnaire/create', 'Bworksio\NovaQuestionable\Http\Controllers\QuestionnaireController@create');
+Route::post('/api/questionnaire/update', 'Bworksio\NovaQuestionable\Http\Controllers\QuestionnaireController@update');
+Route::post('/api/questionnaire/delete', 'Bworksio\NovaQuestionable\Http\Controllers\QuestionnaireController@delete');
