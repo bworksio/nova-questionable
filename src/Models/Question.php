@@ -11,12 +11,12 @@ class Question extends Model
 
     public function questionnaires()
     {
-        return $this->belongsToMany('Questionnaire');
+        return $this->belongsToMany(Questionnaire::class);
     }
   
     public function tags()
     {
-        return $this->belongsToMany('Tag');
+        return $this->belongsToMany(Tag::class);
     }
 
 }

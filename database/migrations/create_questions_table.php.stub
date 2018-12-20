@@ -40,7 +40,7 @@ class CreateQuestionsTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('questionnaire_question', function (Blueprint $table) {
+        Schema::create('question_questionnaire', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('questionnaire_id');
             $table->unsignedInteger('question_id');
@@ -57,7 +57,7 @@ class CreateQuestionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('questionnaire_question');
+        Schema::dropIfExists('question_questionnaire');
         Schema::dropIfExists('question_tag');
         Schema::dropIfExists('questions');
         Schema::dropIfExists('tags');
