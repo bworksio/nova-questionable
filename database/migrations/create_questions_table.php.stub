@@ -57,11 +57,10 @@ class CreateQuestionsTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('questionnaire_question');
+        Schema::dropIfExists('question_tag');
         Schema::dropIfExists('questions');
         Schema::dropIfExists('tags');
         Schema::dropIfExists('questionnaires');
-        Schema::dropIfExists('questionnaire_question');
-        Schema::dropIfExists('question_tag');
-
     }
 }
