@@ -47,7 +47,7 @@ class Questionnaire extends Resource
         return [
             ID::make()->sortable()->hideFromIndex(),
             Text::make('Name')->sortable()->rules('required'),
-            BelongsToMany::make('Questions'),
+            BelongsToMany::make('Questions')->searchable(),
         ];
     }
     /**
