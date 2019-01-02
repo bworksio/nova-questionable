@@ -14,22 +14,22 @@
         <router-link :to="{
             name: 'index',
             params: {
-                resourceName: 'questions'
+                resourceName: 'questionnaires'
             }
         }" class="text-white ml-8 no-underline dim">
-            <!-- {{ __('nova-questionable::resources.questions') }} -->
-            Questions
+            <!-- {{ __('nova-questionable::resources.questionnaires') }} -->
+            Questionnaires
         </router-link>
     </li>
     <li class="leading-wide mb-4 text-sm">
         <router-link :to="{
             name: 'index',
             params: {
-                resourceName: 'questionnaires'
+                resourceName: 'questions'
             }
         }" class="text-white ml-8 no-underline dim">
-            <!-- {{ __('nova-questionable::resources.questionnaires') }} -->
-            Questionnaires
+            <!-- {{ __('nova-questionable::resources.questions') }} -->
+            Questions
         </router-link>
     </li>
     <li class="leading-wide mb-4 text-sm">
