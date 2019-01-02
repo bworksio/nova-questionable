@@ -8,3 +8,39 @@
             Questions
     </span>
 </router-link>
+
+<ul class="list-reset mb-8">
+    <li class="leading-wide mb-4 text-sm">
+        <router-link :to="{
+            name: 'index',
+            params: {
+                resourceName: 'questions'
+            }
+        }" class="text-white ml-8 no-underline dim">
+            <!-- {{ __('nova-questionable::resources.questions') }} -->
+            Questions
+        </router-link>
+    </li>
+    <li class="leading-wide mb-4 text-sm">
+        <router-link :to="{
+            name: 'index',
+            params: {
+                resourceName: 'questionnaires'
+            }
+        }" class="text-white ml-8 no-underline dim">
+            <!-- {{ __('nova-questionable::resources.questionnaires') }} -->
+            Questionnaires
+        </router-link>
+    </li>
+    <li class="leading-wide mb-4 text-sm">
+        <router-link :to="{
+            name: 'index',
+            params: {
+                resourceName: 'tags'
+            }
+        }" class="text-white ml-8 no-underline dim">
+            <!-- {{ __('nova-questionable::resources.tags') }} -->
+            Tags
+        </router-link>
+    </li>
+</ul>

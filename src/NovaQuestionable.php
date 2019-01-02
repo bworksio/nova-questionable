@@ -18,11 +18,6 @@ class NovaQuestionable extends Tool
         Nova::style('nova-questionable', __DIR__.'/../dist/css/tool.css');
     }
 
-    /**
-     * Register the tool's routes.
-     *
-     * @return void
-     */
     static public function sayHi()
     {
         return response()->json([

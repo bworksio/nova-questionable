@@ -19,7 +19,7 @@ class ToolServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'nova-questionable');
 
-        if (!class_exists('CreateQuestionsTables')) {
+        if (!class_exists('CreateQuestionsTable')) {
             $timestamp = date('Y_m_d_His', time());
             $this->publishes([
                 __DIR__ . '/../database/migrations/create_questions_table.php.stub' => $this->app->databasePath() . "/migrations/{$timestamp}_create_questions_table.php",
@@ -33,6 +33,11 @@ class ToolServiceProvider extends ServiceProvider
         Nova::serving(function (ServingNova $event) {
             //
         });
+        Nova::resources([
+            Question::class,
+            Questionnaire::class,
+            Tag::class,
+        ]);
     }
 
     /**
