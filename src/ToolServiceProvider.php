@@ -29,6 +29,8 @@ class ToolServiceProvider extends ServiceProvider
         $this->app->booted(function () {
             $this->routes();
         });
+        
+        Models\Question::observe(Observers\QuestionObserver::class);
 
         Nova::serving(function (ServingNova $event) {
             //
