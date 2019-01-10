@@ -11,6 +11,7 @@
     "require": {
         "php": ">=7.1.0",
         "64robots/nova-fields": "^0.6.1",
+        "naxon/nova-field-sortable": "dev-master",
         "atomescrochus/laravel-string-similarities": "^1.3"
     },
     "require-dev": {
@@ -43,5 +44,11 @@
         ]
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:bworksio/nova-field-sortable.git"
+        }
+    ]
 }
