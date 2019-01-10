@@ -10,17 +10,19 @@ use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\Boolean;
 use Illuminate\Http\Request;
 use Laravel\Nova\Http\Requests\NovaRequest;
-
+use Naxon\NovaFieldSortable\Concerns\SortsIndexEntries;
+use Naxon\NovaFieldSortable\Sortable;
 
 class Question extends Resource
 {
+    use SortsIndexEntries;
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
     public static $model = 'Bworksio\NovaQuestionable\Models\Question';
-
+    public static $defaultSortField = 'order_column';
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
@@ -48,6 +50,7 @@ class Question extends Resource
         return [
             ID::make()->sortable()->hideFromIndex(),
             Text::make('Name')->sortable()->rules('required'),
+            Sortable::make('Order', 'id'),
             Boolean::make('Force')->hideFromIndex()->hideFromDetail(),
         ];
     }
