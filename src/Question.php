@@ -49,8 +49,8 @@ class Question extends Resource
     {
         return [
             ID::make()->sortable()->hideFromIndex(),
-            Text::make('Name')->sortable()->rules('required'),
             Sortable::make('Order', 'id'),
+            Text::make('Name')->sortable()->rules('required'),
             Boolean::make('Force')->hideFromIndex()->hideFromDetail(),
         ];
     }
