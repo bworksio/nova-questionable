@@ -32,5 +32,8 @@ class QuestionObserver
 
         unset($question["force"]);
     }
-  
+    public function saving(Question $question)
+    {
+        unset($question["force"]);
+    }
 }
